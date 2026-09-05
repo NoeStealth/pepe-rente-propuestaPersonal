@@ -1,0 +1,21 @@
+.autos-bg {
+  background: var(--bg-alt);
+  padding: 64px 0;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.ver-todos {
+  text-align: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 800px) {
+  .car-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

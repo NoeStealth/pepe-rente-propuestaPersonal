@@ -1,0 +1,72 @@
+:root {
+  --bg: #F3EBDC;
+  --bg-alt: #EADFC8;
+  --card: #FFFFFF;
+  --text: #2B2723;
+  --text-muted: #6B5D4F;
+  --accent: #B5502F;
+  --accent-soft: #E8DCC8;
+  --border: rgba(43, 39, 35, 0.15);
+}
+
+[data-theme="dark"] {
+  --bg: #241F1B;
+  --bg-alt: #2C2620;
+  --card: #2F2921;
+  --text: #F3EBDC;
+  --text-muted: #C9BBA6;
+  --accent: #D9713F;
+  --accent-soft: #3A2E22;
+  --border: rgba(243, 235, 220, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.section-head {
+  margin-bottom: 28px;
+}
+
+.section-head h2 {
+  font-size: 24px;
+  margin: 0 0 6px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.section-head p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}

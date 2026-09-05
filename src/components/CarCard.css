@@ -1,0 +1,27 @@
+.car-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+}
+
+.car-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+
+.car-card .car-name {
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.car-card .car-cat {
+  padding: 0 12px 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
