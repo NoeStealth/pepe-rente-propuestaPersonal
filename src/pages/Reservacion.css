@@ -1,0 +1,38 @@
+.reservacion {
+  padding: 48px 24px 64px;
+}
+
+.reservacion h1 {
+  font-size: 30px;
+  margin: 0 0 6px;
+}
+
+.reservacion-sub {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+.resumen-parcial {
+  margin-top: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.resumen-parcial h2 {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.resumen-parcial p {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.resumen-parcial .pendiente {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-top: 12px;
+}

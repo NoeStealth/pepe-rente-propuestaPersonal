@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import PaginaEnConstruccion from "./pages/PaginaEnConstruccion";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-
+import Reservacion from "./pages/Reservacion";
 function App() {
   
   const [isDark, setIsDark] = useState(false);
@@ -26,7 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/reservacion"
-          element={<PaginaEnConstruccion titulo="Reservación" />}
+          element={<Reservacion />}
         />
         <Route
           path="/promociones"
