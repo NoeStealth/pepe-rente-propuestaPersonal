@@ -1,0 +1,37 @@
+.selector-fechas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+
+.campo-fecha {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-fecha label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.campo-fecha input {
+  min-width: 180px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+}
+
+/* En modo oscuro, el ícono del calendario nativo también se ve claro */
+[data-theme="dark"] .campo-fecha input {
+  color-scheme: dark;
+}
