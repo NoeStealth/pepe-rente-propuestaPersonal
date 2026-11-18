@@ -1,10 +1,18 @@
-import { hoyISO } from "../utils/calcularRenta";
+import { hoyISO, formatoFecha } from "../utils/calcularRenta";
 import "./SelectorFechas.css";
 
 // Dos campos de fecha. No guarda nada por sí mismo: recibe por props las
 // fechas actuales (recogida, devolucion) y dos funciones que avisan a la
 // página cuando el usuario cambia una fecha. El estado vive en Reservacion.jsx.
-function SelectorFechas({ recogida, devolucion, onCambiarRecogida, onCambiarDevolucion }) {
+// "fechasNoDisponibles" es una lista opcional (AAAA-MM-DD). Si trae fechas,
+// se muestran como aviso; si está vacía, no se muestra nada.
+function SelectorFechas({
+  recogida,
+  devolucion,
+  onCambiarRecogida,
+  onCambiarDevolucion,
+  fechasNoDisponibles = [],
+}) {
   const hoy = hoyISO();
 
   return (
@@ -30,6 +38,12 @@ function SelectorFechas({ recogida, devolucion, onCambiarRecogida, onCambiarDevo
           onChange={(evento) => onCambiarDevolucion(evento.target.value)}
         />
       </div>
+
+      {fechasNoDisponibles.length > 0 && (
+        <p className="aviso-fechas">
+          Fechas no disponibles: {fechasNoDisponibles.map(formatoFecha).join(", ")}
+        </p>
+      )}
     </div>
   );
 }

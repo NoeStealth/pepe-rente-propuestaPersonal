@@ -7,24 +7,20 @@
   margin: 0 0 6px;
 }
 
+/* scroll-margin-top deja espacio para el Header fijo al ir a un paso */
 .paso-titulo {
   font-size: 16px;
   font-weight: 600;
   color: var(--text-muted);
   margin: 28px 0 14px;
+  scroll-margin-top: 110px;
 }
 
 .resumen-parcial {
-  margin-top: 28px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 22px;
-}
-
-.resumen-parcial h2 {
-  font-size: 16px;
-  margin: 0 0 10px;
 }
 
 .resumen-parcial p {
@@ -51,4 +47,38 @@
   color: var(--text-muted);
   font-size: 13px;
   margin-top: 12px;
+}
+
+/* Botones para editar o eliminar la selección */
+.acciones-resumen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn-secundario,
+.btn-eliminar {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-secundario {
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-eliminar {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn-secundario:hover,
+.btn-eliminar:hover {
+  background: var(--accent-soft);
 }

@@ -11,15 +11,25 @@ export function hoyISO() {
   return `${anio}-${mes}-${dia}`;
 }
 
+// ¿Alguna de las fechas no disponibles cae entre la recogida y la devolución
+// (incluyéndolas)? Las fechas son texto AAAA-MM-DD, así que se comparan con >= y <=.
+export function hayFechaNoDisponible(recogida, devolucion, noDisponibles = []) {
+  return noDisponibles.some((fecha) => fecha >= recogida && fecha <= devolucion);
+}
+
 // Regresa un texto con el problema de las fechas, o "" si todo está bien.
 // Como las fechas son texto con formato AAAA-MM-DD, se pueden comparar
 // directamente con < y >: "2026-10-20" < "2026-10-25" es verdadero.
-export function validarFechas(recogida, devolucion) {
+// "noDisponibles" es la lista de fechas en que el auto está ocupado (vacía por ahora).
+export function validarFechas(recogida, devolucion, noDisponibles = []) {
   if (recogida && recogida < hoyISO()) {
     return "La fecha de recogida no puede ser anterior a hoy.";
   }
   if (recogida && devolucion && devolucion < recogida) {
     return "La fecha de devolución no puede ser anterior a la de recogida.";
+  }
+  if (recogida && devolucion && hayFechaNoDisponible(recogida, devolucion, noDisponibles)) {
+    return "El auto no está disponible en alguna de las fechas elegidas.";
   }
   return "";
 }

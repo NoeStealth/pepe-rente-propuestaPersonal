@@ -35,3 +35,11 @@
 [data-theme="dark"] .campo-fecha input {
   color-scheme: dark;
 }
+
+/* Aviso de fechas no disponibles: ocupa toda la fila debajo de los campos */
+.aviso-fechas {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
